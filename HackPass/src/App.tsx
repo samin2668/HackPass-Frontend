@@ -11,7 +11,6 @@ function App() {
     studentId: ''
   });
 
-
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
@@ -21,7 +20,7 @@ function App() {
     event.preventDefault();
     // Here you can perform any action with the form data, like sending it to an API or processing it in any way you need
 
-    axios.post('http://localhost:8080/user', formData)
+    axios.post('http://192.168.1.144:8080/user', formData)
     console.log(formData);
   };
 
@@ -29,9 +28,9 @@ function App() {
     <div>
       <h2>Student Form</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='form-group'>
           <label>
-            Name:
+            Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input
               type="text"
               name="name"
@@ -40,9 +39,9 @@ function App() {
             />
           </label>
         </div>
-        <div>
+        <div className='form-group'>
           <label>
-            Email:
+            Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input
               type="email"
               name="email"
@@ -51,9 +50,9 @@ function App() {
             />
           </label>
         </div>
-        <div>
+        <div className='form-group'>
           <label>
-            University:
+            University:&nbsp;&nbsp;&nbsp;
             <input
               type="text"
               name="university"
@@ -62,9 +61,9 @@ function App() {
             />
           </label>
         </div>
-        <div>
+        <div className='form-group'>
           <label>
-            Student ID:
+            Student ID:&nbsp;&nbsp;
             <input
               type="text"
               name="studentId"
