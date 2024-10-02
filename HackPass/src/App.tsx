@@ -20,7 +20,7 @@ function App() {
     event.preventDefault();
     // Here you can perform any action with the form data, like sending it to an API or processing it in any way you need
 
-    axios.post('http://192.168.1.144:8080/user', formData)
+    axios.post('http://localhost:8080/user', formData)
     console.log(formData);
   };
 
